@@ -29,7 +29,7 @@
             <div class="inputsContainer">
                 <h4 class="inputTitle">Number of people</h4>
                 <button id="peopleMinusBtn" class="counterBtns minusBtn">–</button>
-                <input type="number" id="peopleTotal" class="inputField" min="1" max="1000" value="1">
+                <input type="number" id="peopleTotal" class="inputField" min="1" max="1000" value="1" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
                 <button id="peoplePlusBtn" class="counterBtns plusBtn">+</button>
             </div>
         </div>
@@ -43,7 +43,7 @@
             <span>Per Person</span>
             <h1 id="totalOutputPerPerson">0</h1>
         </div>
-        
+
     </div>
     <script src="script.js"></script>
 </body>
