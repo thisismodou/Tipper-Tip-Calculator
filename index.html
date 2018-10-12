@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Tipper | Tip Calculator</title>
+</head>
+<body>
+    <div id="mainWrapper">
+        <div id="pageTitleWrapper">
+            <h1 class="pageTitle">Tipper</h1>
+            <span class="pageSubtitle">Easiest Tip Calculator</span>
+        </div>
+        <div id="topContainer">
+            <div class="inputsContainer">
+                <h4 class="inputTitle">Total Bill</h4>
+                <input type="number" id="totalBill" class="inputField" placeholder="Enter bill amount" min="0">
+            </div>
+
+            <div class="inputsContainer">
+                <h4 class="inputTitle">Tip %</h4>
+                <button id="tipMinusBtn" class="counterBtns minusBtn">–</button>
+                <input type="number" id="tipPercent" class="inputField" min="1" max="100" value="10">
+                <button id="tipPlusBtn" class="counterBtns plusBtn">+</button>
+            </div>
+        
+            <div class="inputsContainer">
+                <h4 class="inputTitle">Number of people</h4>
+                <button id="peopleMinusBtn" class="counterBtns minusBtn">–</button>
+                <input type="number" id="peopleTotal" class="inputField" min="1" max="1000" value="1">
+                <button id="peoplePlusBtn" class="counterBtns plusBtn">+</button>
+            </div>
+        </div>
+
+        <div id="bottomContainer">
+            <h1>Tip</h1>
+            <span>Per Person</span>
+            <h1 id="tipOutputPerPerson">0</h1>
+
+            <h1>Total</h1>
+            <span>Per Person</span>
+            <h1 id="totalOutputPerPerson">0</h1>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
