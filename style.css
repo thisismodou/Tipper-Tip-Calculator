@@ -25,7 +25,7 @@ h1, h4, h2 {
 
 #pageTitleWrapper {
     /* background: blue; */
-    padding: 4%;
+    padding: 2%;
     height: auto;
 }
 
@@ -36,11 +36,13 @@ h1, h4, h2 {
 }
 
 #bottomContainer {
-    /* background: green; */
+    background: green;
     padding: 1%;
     height: auto;
     padding: 0;
     margin-top: 50px;
+    max-width: 50%;
+    margin: 2% auto;
 }
 
 .pageTitle {
