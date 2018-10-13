@@ -122,6 +122,13 @@ function resetPeopleToMax() {
     }
 }
 
+// let perPersonTags = document.getElementsByClassName('perPersonAll');
+
+// let hello = document.getElementById('hello');
+
+// hello.style.display = 'none';
+
+
 billInput.addEventListener('input', calculateTip);
 tipPlusBtn.addEventListener('click', tipIncrease);
 tipMinusBtn.addEventListener('click', tipDecrease);

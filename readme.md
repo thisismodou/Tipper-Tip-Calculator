@@ -4,4 +4,14 @@ A simple and straight forward tip calculator that automatically calculates tip a
 
 ### Bug Fixes
 
+##### Commit 3
+
 - Removed the ability to type decimals in the Number of People input.
+
+##### Commit 4
+
+- Fixed issue where buttons didn't properly center align (horizontally) with their respective input field.
+
+- Redesigned Tip and Total outputs layout.
+
+- General layout improvements

@@ -19,13 +19,13 @@ body {
     /* background: orange; */
 }
 
-h1, h4 {
+h1, h4, h2 {
     margin: 0;
 }
 
 #pageTitleWrapper {
     /* background: blue; */
-    padding: 5%;
+    padding: 4%;
     height: auto;
 }
 
@@ -39,6 +39,8 @@ h1, h4 {
     /* background: green; */
     padding: 1%;
     height: auto;
+    padding: 0;
+    margin-top: 50px;
 }
 
 .pageTitle {
@@ -55,15 +57,27 @@ h1, h4 {
 }
 
 .inputTitle {
-    margin: 20px;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+.inputTitleBillAmount {
+    margin-top: 0;
+}
+
+.flexAlign {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 50px 0; */
 }
 
 .inputField {
     width: 500px;
-    height: 48px;
+    height: 58px;
     padding: 0;
-    border-top: 0px solid var(--themeColor);
-    border-bottom: 0px solid var(--themeColor);
+    border-top: 1px solid var(--themeColor);
+    border-bottom: 1px solid var(--themeColor);
     border-left: none;
     border-right: none;
     background-color: rgba(255, 255, 255, .1);
@@ -74,9 +88,14 @@ h1, h4 {
     -webkit-appearance: none;
 }
 
+.billInputField {
+    border: none;
+    border-radius: 5px; 
+}
+
 .counterBtns {
     width: 80px;
-    height: 50px;
+    height: 60px;
     padding: 0;
     background-color: transparent;
     border: 1px solid var(--themeColor);
@@ -114,6 +133,35 @@ h1, h4 {
 .plusBtn {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+
+.tipPerPerson {
+    margin-bottom: 0px;
+    width: 45%;
+    /* background: purple; */
+    float: left;
+    padding: 2%;
+}
+
+.totalPerPerson {
+    margin-bottom: 0px;
+    width: 45%;
+    /* background: red; */
+    float: right;
+    padding: 2%;
+}
+
+.perPersonAll {
+    /* display: none; */
+    margin: 10px;
+}
+
+.perPersonAllShow {
+    display: block;
+}
+
+.total {
+    font-size: 3em;
 }
 
 /* Hide default HTML5 Up and Down arrows for number input fields */
