@@ -14,4 +14,10 @@ A simple and straight forward tip calculator that automatically calculates tip a
 
 - Redesigned Tip and Total outputs layout.
 
-- General layout improvements
+- General layout improvements.
+
+##### Commit 6
+
+- Worked on responsiveness, now looks better on mobile devices.
+
+- General Improvements.
