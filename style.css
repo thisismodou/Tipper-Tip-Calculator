@@ -87,11 +87,20 @@ h1, h4, h2 {
     color: var(--themeColor);
     outline: none;
     -webkit-appearance: none;
+    -webkit-border-radius: none;
 }
 
 .billInputField {
     border: none;
     border-radius: 5px;
+}
+
+#tipPercent{
+    border-radius: 0;
+}
+
+#peopleTotal{
+    border-radius: 0;
 }
 
 .counterBtns {
