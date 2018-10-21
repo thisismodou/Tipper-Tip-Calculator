@@ -16,14 +16,14 @@
         <div id="topContainer">
             <div class="inputsContainer">
                 <h4 class="inputTitle inputTitleBillAmount">Total Bill</h4>
-                <input type="number" id="totalBill" class="inputField billInputField" placeholder="Enter bill amount" min="0" >
+                <input type="number" id="totalBill" class="inputField billInputField" placeholder="Enter bill amount" min="0" tabindex="1">
             </div>
 
             <div class="inputsContainer">
                 <h4 class="inputTitle">Tip %</h4>
                 <div class="flexAlign">
                     <button id="tipMinusBtn" class="counterBtns minusBtn">–</button>
-                    <input type="number" id="tipPercent" class="inputField" min="1" max="100" value="10">
+                    <input type="number" id="tipPercent" class="inputField" min="1" max="100" value="10" tabindex="2" disabled>
                     <button id="tipPlusBtn" class="counterBtns plusBtn">+</button>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                 <h4 class="inputTitle">Number of people</h4>
                 <div class="flexAlign">
                     <button id="peopleMinusBtn" class="counterBtns minusBtn">–</button>
-                    <input type="number" id="peopleTotal" class="inputField" min="1" max="1000" value="1" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                    <input type="number" id="peopleTotal" class="inputField" min="1" max="1000" value="1" onkeypress='return event.charCode >= 48 && event.charCode <= 57' tabindex="3" disabled>
                     <button id="peoplePlusBtn" class="counterBtns plusBtn">+</button>
                 </div>
             </div>

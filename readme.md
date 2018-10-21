@@ -20,8 +20,12 @@ A simple and straight forward tip calculator that automatically calculates tip a
 
 - Worked on responsiveness, now looks better on mobile devices.
 
-- General Improvements.
+- General improvements.
 
 ##### Commit 7
 
 - Fixed issue where the Tip Percent and Number of People inputs had rounded corners on Mobile Safari and Chrome.
+
+##### Commit 9
+
+- General improvements

@@ -1,7 +1,7 @@
 function calculateTip() {
     let billTotal = document.getElementById('totalBill');
     let tipPercent = document.getElementById('tipPercent');
-    let noOfPeople = document.getElementById('peopleTotal');    
+    let noOfPeople = document.getElementById('peopleTotal');
 
     let tipTotal = billTotal.value * (tipPercent.value / 100);
     let perPersonTip = tipTotal / noOfPeople.value;
@@ -24,6 +24,7 @@ let peopleInput = document.getElementById('peopleTotal');
 billInput.autofocus = true;
 peopleMinusBtn.disabled = true;
 
+// Increase tip percentage
 function tipIncrease() {
     tipInput.stepUp(1);
     if (tipInput.value >= 1) {
@@ -36,6 +37,7 @@ function tipIncrease() {
     calculateTip();
 }
 
+// Decrease tip percentage
 function tipDecrease() {
     tipInput.stepDown(1);
     if (tipInput.value == 1) {
@@ -48,19 +50,21 @@ function tipDecrease() {
     calculateTip();
 }
 
+// Disable respective tip percentage button when at min or max number (min: 1, max:100)
 function disableTipButtons() {
-    if (tipInput.value == 1) {
+    if (tipInput.value <= 1) {
         tipMinusBtn.disabled = true;
     }else {
         tipMinusBtn.disabled = false;
     }
-    if (tipInput.value == 100) {
+    if (tipInput.value >= 100) {
         tipPlusBtn.disabled = true;
     }else {
         tipPlusBtn.disabled = false;
     }
 }
 
+// Increase number of people
 function peoplePlus() {
     peopleInput.stepUp(1);
     if (peopleInput.value >= 1) {
@@ -73,9 +77,10 @@ function peoplePlus() {
     calculateTip();
 }
 
+// Decrease number of people
 function peopleMinus() {
     peopleInput.stepDown(1);
-    if (peopleInput.value == 1) {
+    if (peopleInput.value <= 1) {
         peopleMinusBtn.disabled = true;
     }
     if (tipInput.value <= 99) {
@@ -85,65 +90,25 @@ function peopleMinus() {
     calculateTip();
 }
 
+// Disable respective number of people button when at min or max (min: 1, max: 1000)
 function disablePeopleButtons() {
-    if (peopleInput.value == 1) {
+    if (peopleInput.value <= 1) {
         peopleMinusBtn.disabled = true;
     }else {
         peopleMinusBtn.disabled = false;
     }
-    if (peopleInput.value == 1000) {
+    if (peopleInput.value >= 1000) {
         peoplePlusBtn.disabled = true;
     }else {
         peoplePlusBtn.disabled = false;
     }
 }
 
-function resetTipToMin() {
-    if (tipInput.value < 1) {
-        tipInput.value = 1;
-    }
-}
-
-function resetTiptoMax() {
-    if (tipInput.value > 100) {
-        tipInput.value = 100
-    }
-}
-
-function resetPeopleToMin() {
-    if (peopleInput.value < 1) {
-        peopleInput.value = 1;
-    }
-}
-
-function resetPeopleToMax() {
-    if (peopleInput.value > 1000) {
-        peopleInput.value = 1000;
-    }
-}
-
-// let perPersonTags = document.getElementsByClassName('perPersonAll');
-
-// let hello = document.getElementById('hello');
-
-// hello.style.display = 'none';
-
-
 billInput.addEventListener('input', calculateTip);
+billInput.addEventListener('focusout', calculateTip);
+
 tipPlusBtn.addEventListener('click', tipIncrease);
 tipMinusBtn.addEventListener('click', tipDecrease);
-tipInput.addEventListener('keyup', disableTipButtons);
-peopleInput.addEventListener('keyup', disablePeopleButtons);
-tipInput.addEventListener('focusout', calculateTip);
-tipInput.addEventListener('input', calculateTip);
-tipInput.addEventListener('focusout', resetTipToMin);
-tipInput.addEventListener('focusout', resetTiptoMax);
-tipInput.addEventListener('focusout', disableTipButtons);
-billInput.addEventListener('focusout', calculateTip);
-peopleInput.addEventListener('focusout', calculateTip);
-peopleInput.addEventListener('input', calculateTip);
-peopleInput.addEventListener('focusout', resetPeopleToMin);
-peopleInput.addEventListener('focusout', resetPeopleToMax);
-peopleInput.addEventListener('focusout', disablePeopleButtons);
+
 peoplePlusBtn.addEventListener('click', peoplePlus);
 peopleMinusBtn.addEventListener('click', peopleMinus);
