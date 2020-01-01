@@ -1,58 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <title>Tipper | Tip Calculator</title>
-</head>
-<body>
-    <div id="mainWrapper">
-        <div id="pageTitleWrapper">
-            <h1 class="pageTitle">Tipper</h1>
-            <span class="pageSubtitle">Fast and Easy Tip Calculator</span>
-        </div>
-        <div id="topContainer">
-            <div class="inputsContainer">
-                <h4 class="inputTitle inputTitleBillAmount">Total Bill</h4>
-                <input type="number" id="totalBill" class="inputField billInputField" placeholder="Enter bill amount" min="0" tabindex="1">
-            </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Tipper | Tip Calculator</title>
+	</head>
+	<body>
+		<div id="mainWrapper">
+			<div id="pageTitleWrapper">
+				<h1 class="pageTitle">Tipper</h1>
+				<span class="pageSubtitle">Fast and Easy Tip Calculator</span>
+			</div>
+			<div id="topContainer">
+				<div class="inputsContainer">
+					<h4 class="inputTitle inputTitleBillAmount">Total Bill</h4>
+					<input
+						type="number"
+						id="totalBill"
+						class="inputField billInputField"
+						placeholder="Enter bill amount"
+						min="0"
+						tabindex="1"
+					/>
+				</div>
 
-            <div class="inputsContainer">
-                <h4 class="inputTitle">Tip %</h4>
-                <div class="flexAlign">
-                    <button id="tipMinusBtn" class="counterBtns minusBtn">–</button>
-                    <input type="number" id="tipPercent" class="inputField" min="1" max="100" value="10" tabindex="2" disabled>
-                    <button id="tipPlusBtn" class="counterBtns plusBtn">+</button>
-                </div>
-            </div>
-        
-            <div class="inputsContainer">
-                <h4 class="inputTitle">Number of people</h4>
-                <div class="flexAlign">
-                    <button id="peopleMinusBtn" class="counterBtns minusBtn">–</button>
-                    <input type="number" id="peopleTotal" class="inputField" min="1" max="1000" value="1" onkeypress='return event.charCode >= 48 && event.charCode <= 57' tabindex="3" disabled>
-                    <button id="peoplePlusBtn" class="counterBtns plusBtn">+</button>
-                </div>
-            </div>
-        </div>
+				<div class="inputsContainer">
+					<h4 class="inputTitle">Tip %</h4>
+					<div class="flexAlign">
+						<button id="tipMinusBtn" class="counterBtns minusBtn">–</button>
+						<input
+							type="number"
+							id="tipPercent"
+							class="inputField"
+							min="1"
+							max="100"
+							value="10"
+							tabindex="2"
+							disabled
+						/>
+						<button id="tipPlusBtn" class="counterBtns plusBtn">+</button>
+					</div>
+				</div>
 
-        <div id="bottomContainer">
-            <div class="tipPerPerson">
-                <h2>Tip</h2>
-                <p class="perPersonAll">Per Person</p>
-                <h1 id="tipOutputPerPerson" class="total">0</h1>
-            </div>
+				<div class="inputsContainer">
+					<h4 class="inputTitle">Number of people</h4>
+					<div class="flexAlign">
+						<button id="peopleMinusBtn" class="counterBtns minusBtn">–</button>
+						<input
+							type="number"
+							id="peopleTotal"
+							class="inputField"
+							min="1"
+							max="1000"
+							value="1"
+							onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+							tabindex="3"
+							disabled
+						/>
+						<button id="peoplePlusBtn" class="counterBtns plusBtn">+</button>
+					</div>
+				</div>
+			</div>
 
-            <div class="totalPerPerson">
-                <h2>Total</h2>
-                <p class="perPersonAll">Per Person</p>
-                <h1 id="totalOutputPerPerson" class="total">0</h1>
-            </div>
-        </div>
+			<div id="bottomContainer">
+				<div class="tipPerPerson">
+					<h2>Tip</h2>
+					<p class="perPersonAll">Per Person</p>
+					<h1 id="tipOutputPerPerson" class="total">0</h1>
+				</div>
 
-    </div>
-    <script src="script.js"></script>
-</body>
+				<div class="totalPerPerson">
+					<h2>Total</h2>
+					<p class="perPersonAll">Per Person</p>
+					<h1 id="totalOutputPerPerson" class="total">0</h1>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
 </html>
